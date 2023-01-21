@@ -37,6 +37,18 @@ public class sauceDemo {
 
         homePage.equals("https://www.saucedemo.com/inventory.html");
 
+        WebElement redTShirt = driver.findElement(By.xpath("//*[contains(text(), 'Test.allTheThings() T-Shirt (Red)')]"));
+
+        redTShirt.click();
+
+        WebElement addShirtCart = driver.findElement(By.id("add-to-cart-test.allthethings()-t-shirt-(red)"));
+
+        addShirtCart.click();
+
+        WebElement shoppingCartIcon = driver.findElement(By.id("shopping_cart_container"));
+
+        shoppingCartIcon.click();
+
         Thread.sleep(5000);
 
         driver.quit();
