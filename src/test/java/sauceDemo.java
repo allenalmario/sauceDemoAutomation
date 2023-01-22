@@ -49,6 +49,36 @@ public class sauceDemo {
 
         shoppingCartIcon.click();
 
+        driver.findElement(By.id("item_3_title_link")).isDisplayed();
+
+        WebElement checkoutButton = driver.findElement(By.id("checkout"));
+
+        checkoutButton.click();
+
+        WebElement firstName = driver.findElement(By.id("first-name"));
+
+        firstName.sendKeys("Eren");
+
+        WebElement lastName = driver.findElement(By.id("last-name"));
+
+        lastName.sendKeys("Jaegar");
+
+        WebElement postalCode = driver.findElement(By.id("postal-code"));
+
+        postalCode.sendKeys("12345");
+
+        WebElement continueButton = driver.findElement(By.id("continue"));
+
+        continueButton.click();
+
+        WebElement finishButton = driver.findElement(By.id("finish"));
+
+        finishButton.click();
+
+        WebElement backHome = driver.findElement(By.id("back-to-products"));
+
+        backHome.click();
+
         Thread.sleep(5000);
 
         driver.quit();
